@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>樂齡動一動 | 每日健康日記</title>
+    <title>長者運動日記 | 每日健康</title>
     
     <!-- 引入 Tailwind CSS (快速樣式) 與 Phosphor Icons (圖示) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,6 +82,14 @@
     <!-- 頂部資訊區 (固定 header) -->
     <header class="flex-none p-4 pb-2 bg-stone-100 border-b border-stone-200 z-50 relative" id="main-header">
         
+        <!-- App 標題與 LOGO (新增區塊) -->
+        <div class="flex items-center justify-center gap-3 mb-4 pt-1">
+            <div class="bg-lime-600 text-white p-2 rounded-xl shadow-md animate-pulse">
+                <i class="ph-fill ph-heartbeat text-2xl"></i>
+            </div>
+            <h1 class="text-3xl font-bold text-lime-900 tracking-wider" style="text-shadow: 1px 1px 0px white;">長者運動日記</h1>
+        </div>
+
         <!-- 日期導覽列 -->
         <div class="relative mb-2">
             <div class="flex items-center justify-center gap-6">
@@ -90,7 +98,7 @@
                 </button>
                 
                 <div class="text-center flex flex-col items-center min-w-[140px]">
-                    <h1 class="text-xl font-bold text-stone-800 tracking-wide" id="currentDate">載入中...</h1>
+                    <div class="text-xl font-bold text-stone-800 tracking-wide" id="currentDate">載入中...</div>
                     <button onclick="app.goToToday()" id="btn-back-today" class="hidden text-xs text-lime-600 font-bold bg-lime-50 px-2 py-0.5 rounded-full mt-1 active:bg-lime-100">
                         回到今天
                     </button>
@@ -222,7 +230,7 @@
             </div>
 
             <div class="text-center text-stone-400 text-sm pt-8">
-                <p>版本 v2.0 (單機完整版)</p>
+                <p>版本 v2.1 (標題圖示版)</p>
                 <p>天天運動，健康長壽</p>
                 <div class="mt-4 space-x-4">
                     <button onclick="app.resetData()" class="text-red-300 text-xs underline">重置所有紀錄</button>
